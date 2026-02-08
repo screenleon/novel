@@ -1,11 +1,11 @@
 ---
 title: "第5章：選修課程"
-chapter: 005
+chapter: 5
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第四週的學習開始了。林星的心情有些沉重。上週的考核失敗讓他開始質疑自己，但也讓他更堅定要學習。"
+excerpt: "后山實戰場的全天演練讓林星學會了配合與觀察；他開始為未來選修課做出初步選擇。"
 tags: ["小說"]
 ---
 

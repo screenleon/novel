@@ -1,11 +1,11 @@
 ---
 title: "第6章：課程的探索"
-chapter: 006
+chapter: 6
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第五週的學習開始了。林星醒來時心情不錯。上週的實戰訓練讓他學到了很多，特別是觀察和分析的重要性。"
+excerpt: "戰術分析與星際歷史課把戰術與智慧放在林星的面前；他開始理解冷靜與計畫的重要性。"
 tags: ["小說"]
 ---
 

@@ -3,9 +3,9 @@ title: "第8章：第二次考核"
 chapter: 8
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第七週，學院舉行第二次考核。這次考核比第一次更難，需要團隊配合和個人能力。"
+excerpt: "第二次考核考驗團隊配合與應變，林星在觀察與預警方面展現出長處，團隊通過考核。"
 tags: ["小說"]
 ---
 

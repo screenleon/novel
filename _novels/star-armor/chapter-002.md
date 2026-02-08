@@ -1,11 +1,11 @@
 ---
 title: "第2章：第一週的適應"
-chapter: 002
+chapter: 2
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第一週的學習開始了。林星已經適應了學院的節奏，每天早晨都會早起進行基礎訓練。宿舍還很安靜，室友們還在睡覺。�"
+excerpt: "第一週的基礎訓練讓林星感到進步，但鐵軍提醒他情緒控制的重要性；與室友的互動逐漸顯現團隊動力。"
 tags: ["小說"]
 ---
 

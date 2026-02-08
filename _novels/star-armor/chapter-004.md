@@ -1,11 +1,11 @@
 ---
 title: "第4章：第一次考核"
-chapter: 004
+chapter: 4
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第三週的學習開始了。林星醒來時感到一絲緊張。前兩週的課程讓他學到了很多，但也讓他意識到自己的不足。今天有第�"
+excerpt: "第一次實戰考核揭示了林星的衝動與團隊配合的弱點；失敗帶來責備也帶來成長的機會。"
 tags: ["小說"]
 ---
 

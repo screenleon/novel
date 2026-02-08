@@ -3,9 +3,9 @@ title: "第10章：新同學"
 chapter: 10
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第九週，一個新學生轉來星甲學院。他叫馬克，來自核心星球，技術天才。"
+excerpt: "新生馬克的到來形成新的比較標準；他在技術上壓倒群體，卻認可林星的觀察能力，引發新的動力。"
 tags: ["小說"]
 ---
 

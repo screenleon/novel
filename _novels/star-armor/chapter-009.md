@@ -3,9 +3,9 @@ title: "第9章：主修的思考"
 chapter: 9
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第八週的學習開始了。林星遇到個人挑戰。早上，他先到訓練場做基礎訓練。"
+excerpt: "戰鬥心理學課讓林星開始正視情緒與選擇；主修抉擇變成重點，他對戰術與情緒控制產生矛盾的吸引。"
 tags: ["小說"]
 ---
 

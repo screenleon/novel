@@ -1,16 +1,19 @@
 ---
-title: "星甲（Star Armor）"
-series: "star-armor"
-author: "(AI)"
-description: "科幻 + 古武 + 機甲元素，主角林星在星甲學院的成長故事。"
+layout: default
+title: "星甲 — 系列索引"
 ---
 
-# 星甲（Star Armor）
+# 星甲（Star-Armor）
 
-本系列為星甲風格小說，章節列表如下（已整理）：
+以下列出本系列章節（依章號排序）。若要顯示草稿，請在 `_config.yml` 將 `show_drafts` 改為 true。
 
-- 第001章：學院的開始
-
-（更多章節將依序加入）
-
-缺章（尚待補齊）：第059–080章、第093–100章、第111–199章。
+{% assign chapters = site.novels | where: "series", "star-armor" | sort: "chapter" %}
+<ol>
+{% for c in chapters %}
+  {% if c.status == "draft" and site.show_drafts != true %}
+    <li>第{{ c.chapter }}章：{{ c.title }} <em>(draft)</em></li>
+  {% else %}
+    <li><a href="{{ c.url | relative_url }}">第{{ c.chapter }}章：{{ c.title }}</a> — {{ c.excerpt }}</li>
+  {% endif %}
+{% endfor %}
+</ol>

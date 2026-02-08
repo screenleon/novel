@@ -1,11 +1,11 @@
 ---
 title: "第7章：圖書館的發現"
-chapter: 007
+chapter: 7
 series: "star-armor"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: "第六週的學習開始了。林星開始專注學習。前幾週的課程讓他學到了很多，但也讓他意識到自己的不足。"
+excerpt: "在圖書館的戰術與訓練系統資料中，林星發現了除明微十二法外的不同路徑，開始思考個人定位。"
 tags: ["小說"]
 ---
 
