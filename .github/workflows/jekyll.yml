@@ -2,7 +2,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["feature/jekyll-novels-setup"]
+    branches: ["master", "feature/jekyll-novels-setup"]
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
