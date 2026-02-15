@@ -1,8 +1,8 @@
 # Basic Jekyll config for the novel site
 title: "Novel Hub"
 description: "A small Jekyll site for hosting multiple novels as collections"
-baseurl: ""
-url: ""
+baseurl: "/novel"
+url: "https://screenleon.github.io"
 
 markdown: kramdown
 
