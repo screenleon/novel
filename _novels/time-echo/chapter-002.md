@@ -1,11 +1,11 @@
 ---
-title: "第2章：回音的啟示"
+title: "第2章：回音的啟示"
 chapter: 2
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "林辰回到東區回音現場追查，夢境與現實交疊的預感讓他更難分辨哪些可能正在成形。"
 tags: ["小說"]
 ---
 

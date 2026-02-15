@@ -1,11 +1,11 @@
 ---
-title: "第3章：導航者的考驗"
+title: "第3章：導航者的考驗"
 chapter: 3
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "在艾拉的辦公室，林辰第一次接受正式訓練，學著把回音從噪聲變成可用的訊號。"
 tags: ["小說"]
 ---
 

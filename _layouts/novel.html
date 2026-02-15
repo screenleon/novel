@@ -10,44 +10,90 @@
     header { border-bottom:1px solid #eee; margin-bottom:1.2rem; padding-bottom:0.6rem }
     h1 { margin:0; font-size:1.6rem }
     .meta { color:#666; font-size:0.9rem; margin-top:0.4rem }
-    .excerpt { background:#fbfbfb; border-left:3px solid #ddd; padding:0.6rem; margin:1rem 0 }
-    nav.chapters { margin-top:2rem; padding-top:1rem; border-top:1px dashed #eee }
+    nav.pager { display:flex; justify-content:space-between; gap:1rem; margin-top:1.5rem }
+    nav.pager a { flex:1 }
+    nav.pager a:nth-child(2) { text-align:center }
+    nav.pager a:nth-child(3) { text-align:right }
+    nav.pager span { flex:1; color:#999 }
+    nav.pager span:nth-child(2) { text-align:center }
+    nav.pager span:nth-child(3) { text-align:right }
     a { color:#0a66c2 }
     .status-draft { color: #b35; font-weight:600 }
   </style>
 </head>
 <body>
   <header>
-    <a href="{{ site.baseurl }}/">← 小說總覽</a>
+    {% assign is_draft_collection = false %}
+    {% if page.collection == 'drafts' %}
+      {% assign is_draft_collection = true %}
+    {% endif %}
+    {% if is_draft_collection %}
+      <a href="{{ '/drafts/' | relative_url }}">← 草稿列表</a>
+    {% else %}
+      <a href="{{ site.baseurl }}/">← 小說總覽</a>
+    {% endif %}
     <h1>{{ page.title }}</h1>
-    <div class="meta">系列：{{ page.series }} · 章節：{{ page.chapter }} · 日期：{{ page.date }} {% if page.status == "draft" %}<span class="status-draft">(DRAFT)</span>{% endif %}</div>
+    <div class="meta">系列：{{ page.series }} · 章節：{{ page.chapter }} · 日期：{{ page.date | date: "%Y-%m-%d" }} {% if is_draft_collection or page.status == "draft" %}<span class="status-draft">(DRAFT)</span>{% endif %}</div>
   </header>
 
-  {% if page.excerpt | strip %}
-  <div class="excerpt">{{ page.excerpt | strip }}</div>
-  {% endif %}
-
+  {% assign excerpt_text = page.excerpt | default: "" | strip %}
   <main>
+    {% if excerpt_text != "" %}
+      <p>{{ excerpt_text }}</p>
+    {% endif %}
     {{ content }}
   </main>
 
-  <nav class="chapters">
+  {% assign drafts_visible = false %}
+  {% if site.show_drafts == true or jekyll.environment == "development" %}
+    {% assign drafts_visible = true %}
+  {% endif %}
+
+  {% if is_draft_collection %}
+    {% assign series_chapters = site.drafts | where: "series", page.series | sort: "chapter" %}
+  {% else %}
     {% assign series_chapters = site.novels | where: "series", page.series | sort: "chapter" %}
-    {% for chap in series_chapters %}
-      {% if chap.status == "draft" and site.show_drafts != true %}
-        {% comment %}Skip draft chapters in navigation when drafts are not shown{% endcomment %}
-      {% else %}
-        {% if chap.url == page.url %}
-          <strong>{{ chap.title }}</strong>
-        {% else %}
-          {% if chap.status == "draft" %}
-            <div>{{ chap.title }} (draft)</div>
-          {% else %}
-            <div><a href="{{ chap.url | relative_url }}">{{ chap.title }}</a></div>
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+  {% endif %}
+  {% if is_draft_collection or drafts_visible == true %}
+    {% assign visible_chapters = series_chapters %}
+  {% else %}
+    {% assign visible_chapters = series_chapters | where_exp: "c", "c.status != 'draft'" %}
+  {% endif %}
+
+  {% assign prev_chap = nil %}
+  {% assign next_chap = nil %}
+  {% assign found_current = false %}
+  {% for c in visible_chapters %}
+    {% if found_current == true and next_chap == nil %}
+      {% assign next_chap = c %}
+    {% endif %}
+
+    {% if c.url == page.url %}
+      {% assign found_current = true %}
+    {% elsif found_current != true %}
+      {% assign prev_chap = c %}
+    {% endif %}
+  {% endfor %}
+
+  {% if is_draft_collection %}
+    {% assign series_index_url = '/drafts/' | relative_url %}
+  {% else %}
+    {% assign series_index_url = '/novels/' | append: page.series | append: '/' | relative_url %}
+  {% endif %}
+  <nav class="pager" aria-label="章節導覽">
+    {% if prev_chap %}
+      <a href="{{ prev_chap.url | relative_url }}">← 上一章</a>
+    {% else %}
+      <span>← 上一章</span>
+    {% endif %}
+
+    <a href="{{ series_index_url }}">回到章節列表</a>
+
+    {% if next_chap %}
+      <a href="{{ next_chap.url | relative_url }}">下一章 →</a>
+    {% else %}
+      <span>下一章 →</span>
+    {% endif %}
   </nav>
 
   <footer style="margin-top:2rem; border-top:1px solid #f0f0f0; padding-top:1rem; color:#666; font-size:0.9rem">
