@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "星甲 — 系列索引"
+title: "時光回音 — 系列索引"
 ---
 
-# 星甲（Star-Armor）
+# 時光回音（Time-Echo）
 
 以下列出本系列章節（依章號排序）。
 
@@ -12,7 +12,7 @@ title: "星甲 — 系列索引"
   {% assign drafts_visible = true %}
 {% endif %}
 
-{% assign chapters = site.novels | where: "series", "star-armor" | sort: "chapter" %}
+{% assign chapters = site.novels | where: "series", "time-echo" | sort: "chapter" %}
 <ol>
 {% for c in chapters %}
   {% unless c.status == "draft" and drafts_visible != true %}

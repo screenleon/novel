@@ -1,0 +1,14 @@
+# Jekyll build output
+_site/
+
+# Jekyll/Ruby caches
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler / Ruby
+.bundle/
+vendor/
+
+# Local-only overrides
+_config.local.yml
