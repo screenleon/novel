@@ -23,8 +23,8 @@
     <div class="meta">系列：{{ page.series }} · 章節：{{ page.chapter }} · 日期：{{ page.date }} {% if page.status == "draft" %}<span class="status-draft">(DRAFT)</span>{% endif %}</div>
   </header>
 
-  {% if page.excerpt %}
-  <div class="excerpt">{{ page.excerpt }}</div>
+  {% if page.excerpt | strip %}
+  <div class="excerpt">{{ page.excerpt | strip }}</div>
   {% endif %}
 
   <main>
@@ -34,13 +34,17 @@
   <nav class="chapters">
     {% assign series_chapters = site.novels | where: "series", page.series | sort: "chapter" %}
     {% for chap in series_chapters %}
-      {% if chap.url == page.url %}
-        <strong>第{{ chap.chapter }}章：{{ chap.title }}</strong>
+      {% if chap.status == "draft" and site.show_drafts != true %}
+        {% comment %}Skip draft chapters in navigation when drafts are not shown{% endcomment %}
       {% else %}
-        {% if chap.status == "draft" and site.show_drafts != true %}
-          <div>{{ chap.chapter }}. {{ chap.title }} (draft)</div>
+        {% if chap.url == page.url %}
+          <strong>{{ chap.title }}</strong>
         {% else %}
-          <div><a href="{{ chap.url | relative_url }}">第{{ chap.chapter }}章：{{ chap.title }}</a></div>
+          {% if chap.status == "draft" %}
+            <div>{{ chap.title }} (draft)</div>
+          {% else %}
+            <div><a href="{{ chap.url | relative_url }}">{{ chap.title }}</a></div>
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endfor %}
