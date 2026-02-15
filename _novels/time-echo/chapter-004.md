@@ -1,11 +1,11 @@
 ---
-title: "第4章：河流的交織"
+title: "第4章：河流的交織"
 chapter: 4
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "一週訓練後，林辰被派往南區的時間交織事故現場，面對多重時間線重疊造成的混亂。"
 tags: ["小說"]
 ---
 

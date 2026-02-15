@@ -1,11 +1,11 @@
 ---
-title: "第1章：隱藏的回音"
+title: "第1章：隱藏的回音"
 chapter: 1
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "觀察者林辰在艾倫堡高塔捕捉到東區的異常回音，並意識到自己的感知既是優勢也是負擔。"
 tags: ["小說"]
 ---
 

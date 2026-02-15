@@ -10,6 +10,9 @@ collections:
   novels:
     output: true
     permalink: /novels/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 # Control whether drafts are shown on index pages
 show_drafts: false
@@ -18,6 +21,11 @@ defaults:
   - scope:
       path: ""
       type: "novels"
+    values:
+      layout: "novel"
+  - scope:
+      path: ""
+      type: "drafts"
     values:
       layout: "novel"
 

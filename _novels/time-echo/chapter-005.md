@@ -1,11 +1,11 @@
 ---
-title: "第5章：守護者的召喚"
+title: "第5章：守護者的召喚"
 chapter: 5
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "特別項目的邀請逼近，林辰在自由與責任之間搖擺，卻又聽見更強烈的回音警示。"
 tags: ["小說"]
 ---
 
