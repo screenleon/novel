@@ -1,11 +1,13 @@
 ---
-title: "第1章：隱藏的回音"
+title: "第1章：隱藏的回音
+"
 chapter: 1
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "
+"
 tags: ["小說"]
 ---
 

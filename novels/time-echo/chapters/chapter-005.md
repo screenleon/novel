@@ -1,11 +1,13 @@
 ---
-title: "第5章：守護者的召喚"
+title: "第5章：守護者的召喚
+"
 chapter: 5
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "
+"
 tags: ["小說"]
 ---
 

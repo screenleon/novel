@@ -1,11 +1,13 @@
 ---
-title: "第2章：回音的啟示"
+title: "第2章：回音的啟示
+"
 chapter: 2
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "
+"
 tags: ["小說"]
 ---
 

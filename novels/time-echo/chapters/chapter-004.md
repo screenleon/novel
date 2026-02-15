@@ -1,11 +1,13 @@
 ---
-title: "第4章：河流的交織"
+title: "第4章：河流的交織
+"
 chapter: 4
 series: "time-echo"
 volume: 1
-status: "published"
+status: "draft"
 date: 2026-02-08
-excerpt: ""
+excerpt: "
+"
 tags: ["小說"]
 ---
 
