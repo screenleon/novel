@@ -1,0 +1,27 @@
+# Basic Jekyll config for the novel site
+title: "Novel Hub"
+description: "A small Jekyll site for hosting multiple novels as collections"
+baseurl: "/novel"
+url: "https://screenleon.github.io"
+
+markdown: kramdown
+
+collections:
+  novels:
+    output: true
+    permalink: /novels/:path/
+
+# Control whether drafts are shown on index pages
+show_drafts: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "novels"
+    values:
+      layout: "novel"
+
+permalink: /:collection/:path/
+
+# Keep Jekyll safe for GitHub Pages compatibility
+safe: true
