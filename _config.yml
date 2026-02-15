@@ -13,6 +13,9 @@ collections:
   drafts:
     output: true
     permalink: /drafts/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 # Control whether drafts are shown on index pages
 show_drafts: false
