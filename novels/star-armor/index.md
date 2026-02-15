@@ -5,18 +5,9 @@ title: "星甲 — 系列索引"
 
 # 星甲（Star-Armor）
 
-以下列出本系列章節（依章號排序）。
+目前本系列沒有任何「公開」章節。
 
-{% assign drafts_visible = false %}
-{% if site.show_drafts == true or jekyll.environment == "development" %}
-  {% assign drafts_visible = true %}
-{% endif %}
+草稿版本請見：
 
-{% assign chapters = site.novels | where: "series", "star-armor" | sort: "chapter" %}
-<ol>
-{% for c in chapters %}
-  {% unless c.status == "draft" and drafts_visible != true %}
-    <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a> — {{ c.excerpt }}</li>
-  {% endunless %}
-{% endfor %}
-</ol>
+- <a href="{{ '/drafts/star-armor/' | relative_url }}">/drafts/star-armor/</a>
+
